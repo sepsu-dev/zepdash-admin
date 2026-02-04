@@ -231,6 +231,21 @@ body {
   transform: rotate(-90deg);
 }
 
+/* Parent highlight when sub-menu is expanded */
+.zd-sidenav .zd-sidenav-menu .nav .nav-link[aria-expanded="true"] {
+  color: var(--zd-primary);
+}
+
+.zd-sidenav .zd-sidenav-menu .nav .nav-link[aria-expanded="true"] .zd-nav-link-icon {
+  color: var(--zd-primary);
+  opacity: 1;
+}
+
+.zd-sidenav .zd-sidenav-menu .nav .nav-link[aria-expanded="true"] .zd-sidenav-collapse-arrow {
+  opacity: 1;
+  color: var(--zd-primary);
+}
+
 .zd-sidenav .zd-sidenav-menu .nav .zd-sidenav-menu-nested {
   margin-left: 1rem;
   flex-direction: column;
@@ -239,7 +254,7 @@ body {
 }
 
 .zd-sidenav .zd-sidenav-menu .nav .zd-sidenav-menu-nested .nav-link.active {
-  background-color: transparent;
+  background-color: rgba(0, 111, 238, 0.08);
   color: var(--zd-primary);
   font-weight: 500;
 }
@@ -268,7 +283,7 @@ body {
 .zd-sidenav-light .zd-sidenav-menu .nav-link.active {
   background: rgba(0, 111, 238, 0.08);
   color: var(--zd-primary);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .zd-sidenav-light .zd-sidenav-menu .nav-link.active .zd-nav-link-icon {
@@ -525,6 +540,23 @@ ul.dropdown-menu li a.dropdown-item:hover {
   background: linear-gradient(135deg, #059669 0%, var(--zd-success) 100%) !important;
 }
 
+.bg-success-subtle {
+  background-color: rgba(23, 201, 100, 0.1) !important;
+}
+
+.bg-warning-subtle {
+  background-color: rgba(245, 165, 36, 0.1) !important;
+}
+
+.bg-danger-subtle {
+  background-color: rgba(243, 18, 96, 0.1) !important;
+}
+
+.bg-primary-subtle {
+  background-color: rgba(0, 111, 238, 0.1) !important;
+}
+
+
 /* ======================================
    Breadcrumb
    ====================================== */
@@ -592,8 +624,82 @@ ul.dropdown-menu li a.dropdown-item:hover {
 }
 
 /* ======================================
-   Global Phosphor Icon Alignment
+   Dashboard Components
    ====================================== */
+.stats-card {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.stats-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--zd-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.icon-blue {
+  background: rgba(0, 111, 238, 0.1);
+  color: var(--zd-primary);
+}
+
+.icon-success {
+  background: rgba(23, 201, 100, 0.1);
+  color: var(--zd-success);
+}
+
+.icon-warning {
+  background: rgba(245, 165, 36, 0.1);
+  color: var(--zd-warning);
+}
+
+.icon-danger {
+  background: rgba(243, 18, 96, 0.1);
+  color: var(--zd-danger);
+}
+
+.stats-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--zd-text);
+}
+
+.stats-info span {
+  font-size: 0.8rem;
+  color: var(--zd-text-muted);
+  font-weight: 500;
+}
+
+.trend-indicator {
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 0.5rem;
+}
+
+.trend-up {
+  color: var(--zd-success);
+}
+
+.trend-down {
+  color: var(--zd-danger);
+}
+
+/* Table specific */
+.table-td-status {
+  width: 100px;
+}
+
+/* Global Phosphor Icon Alignment */
 i[class^="ph-"],
 i[class*=" ph-"] {
   vertical-align: middle;
