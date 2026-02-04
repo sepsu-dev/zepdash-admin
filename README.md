@@ -3,7 +3,7 @@
 [![id](https://img.shields.io/badge/lang-id-blue.svg)](README.id.md)
 ![GitHub all releases](https://img.shields.io/github/downloads/sepsu-dev/zepdash-admin/total)
 
-<img src="https://raw.githubusercontent.com/sepsu-dev/zepdash-admin/4416bd5b54ec5591015c683400a423402f71ed3b/assets/img/logo.png" alt="logo" width="100">
+<img src="https://github.com/sepsu-dev/zepdash-admin/blob/3ec04cc3299a38f5a6aa43c868c673323c517a78/assets/img/logo.png" alt="logo" width="100">
 
 **zepdash — Template Admin Minimal dengan Bootstrap 5**
 
