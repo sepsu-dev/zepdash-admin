@@ -1,9 +1,9 @@
 # zepdash  
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
 [![id](https://img.shields.io/badge/lang-id-blue.svg)](README.id.md)
-![GitHub all releases](https://img.shields.io/github/downloads/zupzep/zepdash/total)
+![GitHub all releases](https://img.shields.io/github/downloads/sepsu-dev/zepdash-admin/total)
 
-<img src="https://raw.githubusercontent.com/zupzep/zepdash/4416bd5b54ec5591015c683400a423402f71ed3b/assets/img/logo.png" alt="logo" width="100">
+<img src="https://raw.githubusercontent.com/sepsu-dev/zepdash-admin/4416bd5b54ec5591015c683400a423402f71ed3b/assets/img/logo.png" alt="logo" width="100">
 
 **zepdash — Template Admin Minimal dengan Bootstrap 5**
 
@@ -77,7 +77,7 @@ You can use Zepdash as a **static HTML template** or integrate it into your work
 ### Static HTML
 Just clone the repository and open the file in your browser:
 ```bash
-git clone https://github.com/zupzep/zepdash.git
+git clone https://github.com/sepsu-dev/zepdash-admin.git
 cd zepdash
 
 open index.html
