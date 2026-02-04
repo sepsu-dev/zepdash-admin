@@ -1,13 +1,11 @@
-# zepdash  
-[![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
-[![id](https://img.shields.io/badge/lang-id-blue.svg)](README.id.md)
+# zepdash-admin  
 ![GitHub all releases](https://img.shields.io/github/downloads/sepsu-dev/zepdash-admin/total)
 
 <img src="https://raw.githubusercontent.com/sepsu-dev/zepdash-admin/refs/heads/main/assets/img/logo.png" alt="logo" width="100">
 
-**zepdash — Template Admin Minimal dengan Bootstrap 5**
+**zepdash-admin — Template Admin Minimal dengan Bootstrap 5**
 
-zepdash is a **lightweight and modern admin dashboard template** built with **Bootstrap 5**.  
+zepdash-admin is a **lightweight and modern admin dashboard template** built with **Bootstrap 5**.  
 It focuses on essential UI elements — clean, simple, and perfect as a base for your own dashboard or CMS project.
 
 ---
@@ -72,7 +70,7 @@ Common ready-to-use pages:
 
 ## 🧩 Installation
 
-You can use Zepdash as a **static HTML template** or integrate it into your workflow.
+You can use zepdash-admin as a **static HTML template** or integrate it into your workflow.
 
 ### Static HTML
 Just clone the repository and open the file in your browser:
