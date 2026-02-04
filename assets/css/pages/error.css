@@ -1,0 +1,41 @@
+body {
+    background-color: var(--zd-bg-light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: var(--zd-text);
+}
+
+.error-code {
+    font-size: 10rem;
+    font-weight: 800;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.error-404 {
+    background: linear-gradient(135deg, var(--zd-primary), var(--zd-primary-light));
+    filter: drop-shadow(0 10px 20px rgba(0, 111, 238, 0.2));
+}
+
+.error-500 {
+    background: linear-gradient(135deg, #ef4444, #f59e0b);
+    filter: drop-shadow(0 10px 20px rgba(239, 68, 68, 0.2));
+}
+
+.error-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--zd-text);
+}
+
+.error-text {
+    color: var(--zd-text-muted);
+    max-width: 450px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+}

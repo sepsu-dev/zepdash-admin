@@ -1,0 +1,51 @@
+body {
+    background-color: var(--zd-bg-light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.register-card {
+    max-width: 480px;
+    margin: 2rem auto;
+    border-radius: var(--zd-radius-lg);
+    box-shadow: var(--zd-shadow-xl);
+    border: 1px solid var(--zd-border);
+    overflow: hidden;
+    background: #fff;
+}
+
+.register-header {
+    padding: 3rem 2rem 1.5rem;
+    text-align: center;
+}
+
+.register-header .icon-box {
+    width: 64px;
+    height: 64px;
+    background: rgba(23, 201, 100, 0.1);
+    color: var(--zd-success);
+    border-radius: var(--zd-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.75rem;
+}
+
+.register-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--zd-text);
+    margin-bottom: 0.5rem;
+}
+
+.register-body {
+    padding: 0 2.5rem 3rem;
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--zd-text);
+}
