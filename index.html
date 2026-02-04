@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic SEO -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>zepdash</title>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="zepdash is a modern Bootstrap-based admin dashboard built for developers to create analytics and data visualization tools easily." />
+  <meta name="keywords" content="zepdash, admin dashboard, bootstrap, analytics, webapp, developer tool" />
+  <meta name="author" content="zupzep developer" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://zepdash.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="zepdash - Modern Admin Dashboard for Developers" />
+  <meta property="og:description" content="A Bootstrap-based admin dashboard designed for analytics and developer tools." />
+  <meta property="og:image" content="https://zepdash.vercel.app/assets/img/logo.png" />
+  <meta property="og:url" content="https://zepdash.vercel.app/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/phosphor/bold/style.css" />
+  <link rel="stylesheet" href="assets/css/phosphor/regular/style.css" />
+  <link rel="stylesheet" href="assets/css/phosphor/fill/style.css" />
+
+  <!-- Schema.org (Developer + App Info) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "zepdash",
+    "url": "https://zepdash.vercel.app",
+    "applicationCategory": "Dashboard, Analytics, Developer Tool",
+    "operatingSystem": "All",
+    "description": "zepdash is a modern, Bootstrap-based admin dashboard designed for developers to build analytics and data visualization panels.",
+    "author": {
+      "@type": "Person",
+      "name": "zupzep developer",
+      "url": "https://github.com/zupzep"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "zupzep",
+      "url": "https://zepdash.vercel.app"
+    },
+    "softwareVersion": "1.0.0",
+    "inLanguage": "en",
+    "license": "https://opensource.org/licenses/MIT",
+    "keywords": ["zepdash", "bootstrap dashboard", "admin template", "developer tool", "web analytics"]
+  }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T8JTCG66');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body class="zd-nav-fixed">
+  <header>
+    <nav class="zd-topnav navbar navbar-expand navbar-light">
+      <div class="navbar-brand ps-3 d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="zepdash Logo" class="logo-navbar" />
+        <span class="ms-2 fw-semibold">zepdash</span>
+      </div>
+
+      <button class="btn btn-light" id="sidebarToggle" aria-label="Toggle sidebar">
+        <i class="ph-bold ph-sidebar-simple"></i>
+      </button>
+
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle dropdown-user" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span>zepdash User</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#!">Settings</a></li>
+            <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#!">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="layoutSidenav">
+    <aside id="layoutSidenav_nav">
+      <nav class="zd-sidenav accordion zd-sidenav-light" id="sidenavAccordion">
+        <div class="zd-sidenav-menu">
+          <div class="nav">
+            <h2 class="zd-sidenav-menu-heading">Menu</h2>
+
+            <a class="nav-link active" href="index.html">
+              <div class="zd-nav-link-icon"><i class="ph-bold ph-house"></i></div>
+              <span>Dashboard</span>
+            </a>
+
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#componentsCollapse">
+              <div class="zd-nav-link-icon"><i class="ph-bold ph-squares-four"></i></div>
+              <span>Components</span>
+              <div class="zd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+            </a>
+
+            <div class="collapse" id="componentsCollapse" data-bs-parent="#sidenavAccordion">
+              <nav class="zd-sidenav-menu-nested nav">
+                <a class="nav-link" href="#">Alerts</a>
+                <a class="nav-link" href="#">Badges</a>
+                <a class="nav-link" href="#">Buttons</a>
+                <a class="nav-link" href="#">Cards</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <footer class="zd-sidenav-footer">
+          <small>Logged in as:</small>
+          <div>zepdash User</div>
+        </footer>
+      </nav>
+    </aside>
+
+    <main id="layoutSidenav_content">
+      <section class="container-fluid px-4">
+        <header class="my-4">
+          <h1 class="h4 mb-0">zepdash Dashboard</h1>
+          <p class="text-muted">Modern admin dashboard for developers with responsive design.</p>
+        </header>
+
+        <div class="row">
+          <article class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                Example of using <code>.zd-sidenav-light</code> for light navigation.
+              </div>
+            </div>
+          </article>
+
+          <article class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                Switch to <code>.zd-sidenav-dark</code> for a dark mode experience.
+              </div>
+            </div>
+          </article>
+
+          <article class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                zepdash helps developers build responsive dashboards faster.
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8JTCG66"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>
+
