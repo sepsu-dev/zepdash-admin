@@ -12,32 +12,37 @@
     <link rel="stylesheet" href="assets/css/phosphor/bold/style.css" />
     <style>
         body {
-            background: linear-gradient(135deg, #4a1c40 0%, #1a0a14 100%);
+            background-color: var(--zd-bg-light);
             min-height: 100vh;
             display: flex;
             align-items: center;
-            color: #fff;
+            color: var(--zd-text);
         }
 
         .error-code {
-            font-size: 8rem;
-            font-weight: 700;
+            font-size: 10rem;
+            font-weight: 800;
             background: linear-gradient(135deg, #ef4444, #f59e0b);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 10px 20px rgba(239, 68, 68, 0.2));
         }
 
         .error-title {
-            font-size: 2rem;
-            font-weight: 600;
+            font-size: 2.25rem;
+            font-weight: 700;
             margin-bottom: 1rem;
+            color: var(--zd-text);
         }
 
         .error-text {
-            color: rgba(255, 255, 255, 0.7);
-            max-width: 400px;
-            margin: 0 auto 2rem;
+            color: var(--zd-text-muted);
+            max-width: 450px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.1rem;
         }
     </style>
 </head>

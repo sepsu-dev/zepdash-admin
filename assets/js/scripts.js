@@ -1,7 +1,22 @@
-window.addEventListener('DOMContentLoaded', event => {
+// Initialize on page load
+window.addEventListener('load', () => {
+    const loader = document.getElementById('mpa-loader');
+    if (loader) {
+        loader.style.width = '100%';
+        setTimeout(() => {
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.width = '0';
+                loader.style.opacity = '1';
+            }, 300);
+        }, 300);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
 
     // Toggle the side navigation
-    const sidebarToggle = document.body.querySelector('#sidebarToggle');
+    const sidebarToggle = document.querySelector('#sidebarToggle');
     if (sidebarToggle) {
         sidebarToggle.addEventListener('click', event => {
             event.preventDefault();
@@ -13,8 +28,8 @@ window.addEventListener('DOMContentLoaded', event => {
     // Toggle Code Visibility
     document.querySelectorAll('.btn-toggle-code').forEach(btn => {
         btn.addEventListener('click', function () {
-            const cardBody = this.closest('.card-body') || this.parentElement.parentElement;
-            const codeBlock = cardBody.querySelector('pre');
+            const wrapper = this.closest('.code-wrapper');
+            const codeBlock = wrapper.querySelector('pre');
 
             if (codeBlock.classList.contains('d-none')) {
                 codeBlock.classList.remove('d-none');
@@ -29,8 +44,8 @@ window.addEventListener('DOMContentLoaded', event => {
     // Copy Code to Clipboard
     document.querySelectorAll('.btn-copy-code').forEach(btn => {
         btn.addEventListener('click', function () {
-            const cardBody = this.closest('.card-body') || this.parentElement.parentElement;
-            const codeContent = cardBody.querySelector('code').innerText;
+            const wrapper = this.closest('.code-wrapper');
+            const codeContent = wrapper.querySelector('code').innerText;
 
             navigator.clipboard.writeText(codeContent).then(() => {
                 const originalText = btn.innerHTML;
@@ -47,6 +62,20 @@ window.addEventListener('DOMContentLoaded', event => {
                 console.error('Failed to copy: ', err);
             });
         });
+    });
+
+    // MPA Loading Effect on link click
+    document.querySelectorAll('a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href !== '#' && !href.startsWith('http') && !link.hasAttribute('data-bs-toggle')) {
+            link.addEventListener('click', () => {
+                const loader = document.getElementById('mpa-loader');
+                if (loader) {
+                    loader.style.width = '70%';
+                    loader.style.opacity = '1';
+                }
+            });
+        }
     });
 
 });

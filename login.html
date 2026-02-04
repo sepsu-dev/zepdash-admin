@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/phosphor/bold/style.css" />
     <style>
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-color: var(--zd-bg-light);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -21,31 +21,46 @@
         .login-card {
             max-width: 420px;
             margin: 0 auto;
-            border-radius: 1rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-radius: var(--zd-radius-lg);
+            box-shadow: var(--zd-shadow-xl);
+            border: 1px solid var(--zd-border);
+            overflow: hidden;
+            background: #fff;
         }
 
         .login-header {
-            background: linear-gradient(135deg, var(--zd-primary) 0%, var(--zd-primary-dark) 100%);
-            color: #fff;
-            padding: 2rem;
-            border-radius: 1rem 1rem 0 0;
+            padding: 3rem 2rem 1.5rem;
             text-align: center;
+        }
+
+        .login-header .icon-box {
+            width: 64px;
+            height: 64px;
+            background: rgba(0, 111, 238, 0.1);
+            color: var(--zd-primary);
+            border-radius: var(--zd-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.75rem;
         }
 
         .login-header h1 {
             font-size: 1.5rem;
-            margin-bottom: 0.25rem;
+            font-weight: 700;
+            color: var(--zd-text);
+            margin-bottom: 0.5rem;
         }
 
         .login-body {
-            padding: 2rem;
-            background: #fff;
-            border-radius: 0 0 1rem 1rem;
+            padding: 0 2.5rem 3rem;
         }
 
-        .form-floating label {
-            color: var(--zd-text-muted);
+        .form-label {
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: var(--zd-text);
         }
     </style>
 </head>
@@ -54,19 +69,21 @@
     <div class="container">
         <div class="card login-card">
             <div class="login-header">
-                <i class="ph-bold ph-lock fs-1 mb-2"></i>
+                <div class="icon-box">
+                    <i class="ph-bold ph-lock"></i>
+                </div>
                 <h1>Welcome Back</h1>
-                <p class="mb-0 opacity-75">Sign in to your account</p>
+                <p class="mb-0 text-muted">Sign in to your account to continue</p>
             </div>
             <div class="login-body">
                 <form>
-                    <div class="form-floating mb-3">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
                         <input type="email" class="form-control" id="email" placeholder="name@example.com" />
-                        <label for="email"><i class="ph-bold ph-envelope me-2"></i>Email address</label>
                     </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="password" placeholder="Password" />
-                        <label for="password"><i class="ph-bold ph-lock me-2"></i>Password</label>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password" />
                     </div>
                     <div class="d-flex justify-content-between mb-3">
                         <div class="form-check">
