@@ -85,7 +85,7 @@ body {
   justify-content: space-between;
   min-width: 0;
   flex-grow: 1;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - 64px);
   margin-left: -265px;
 }
 
@@ -150,22 +150,17 @@ body {
 }
 
 .zd-nav-fixed #layoutSidenav #layoutSidenav_nav .zd-sidenav {
-  padding-top: 56px;
+  padding-top: 64px;
 }
 
 .zd-nav-fixed #layoutSidenav #layoutSidenav_nav .zd-sidenav .zd-sidenav-menu {
-  overflow-y: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.zd-nav-fixed #layoutSidenav #layoutSidenav_nav .zd-sidenav .zd-sidenav-menu::-webkit-scrollbar {
-  display: none;
+  /* Let SimpleBar handle overflow */
+  min-height: 0;
 }
 
 .zd-nav-fixed #layoutSidenav #layoutSidenav_content {
   padding-left: 265px;
-  top: 56px;
+  top: 64px;
 }
 
 .nav .nav-link .zd-nav-link-icon,
@@ -292,6 +287,7 @@ body {
 .zd-sidenav .zd-sidenav-menu .nav {
   flex-direction: column;
   flex-wrap: nowrap;
+  padding-bottom: 0;
 }
 
 .zd-sidenav .zd-sidenav-menu .nav .zd-sidenav-menu-heading {
@@ -396,8 +392,8 @@ body {
   background-color: var(--zd-bg-light);
   border-top: var(--zd-border) solid 1px;
   font-size: 0.85rem;
-  border-radius: var(--zd-radius);
-  margin: 0.5rem;
+  padding: 1.25rem;
+  /* Removed margin to prevent white gap at bottom */
 }
 
 /* ======================================

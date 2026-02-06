@@ -6,31 +6,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Meta SEO -->
     <meta name="description" content="NaonDash - Free Bootstrap 5 Admin Dashboard" />
     <meta name="keywords" content="naondash, admin dashboard, bootstrap 5, ui kit, webapp" />
     <meta name="author" content="NaonDash" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content="NaonDash - Free Bootstrap 5 Admin Dashboard" />
     <meta property="og:description" content="NaonDash - Free Bootstrap 5 Admin Dashboard" />
     <meta property="og:type" content="website" />
-    <title>NaonDash - Toasts</title>
+    <title>NaonDash - Chat</title>
+
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
     <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/plugins/nprogress/nprogress.min.css" />
     <link href="../assets/styles/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/plugins/animate/animate.min.css" />
-    <link rel="stylesheet" href="../assets/plugins/sweetalert2/sweetalert2.min.css" />
-    <link rel="stylesheet" href="../assets/plugins/tempus-dominus/css/tempus-dominus.min.css" />
-    <link rel="stylesheet" href="../assets/plugins/select2/css/select2.min.css" />
-    <link rel="stylesheet" href="../assets/plugins/select2/css/select2-bootstrap-5-theme.min.css" />
     <link rel="stylesheet" href="../assets/plugins/simplebar/simplebar.min.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css" />
-    <!-- Notyf (Solid-style Toasts) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
+    <style>
+        .chat-sidebar {
+            height: calc(100vh - 180px);
+            min-height: 500px;
+        }
+
+        .chat-list-wrapper {
+            height: calc(100% - 70px);
+        }
+
+        .chat-item {
+            cursor: pointer;
+            transition: var(--zd-transition);
+            border-bottom: 1px solid var(--zd-border);
+            padding: 1rem;
+        }
+
+        .chat-item:hover {
+            background-color: var(--zd-bg-light);
+        }
+
+        .chat-item.active {
+            background-color: var(--zd-primary-subtle);
+            border-left: 3px solid var(--zd-primary);
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 2px solid #fff;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .status-online {
+            background-color: var(--zd-success);
+        }
+
+        .status-offline {
+            background-color: var(--zd-gray-400);
+        }
+
+        .status-away {
+            background-color: var(--zd-warning);
+        }
+
+        .chat-content {
+            height: calc(100vh - 180px);
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-history {
+            flex: 1;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+        }
+
+        .message {
+            margin-bottom: 1.5rem;
+            max-width: 75%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message-inbound {
+            align-self: flex-start;
+        }
+
+        .message-outbound {
+            align-self: flex-end;
+            align-items: flex-end;
+        }
+
+        .message-bubble {
+            padding: 0.8rem 1.2rem;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .message-inbound .message-bubble {
+            background-color: #fff;
+            border-bottom-left-radius: 0.2rem;
+            color: var(--zd-text);
+        }
+
+        .message-outbound .message-bubble {
+            background-color: var(--zd-primary);
+            color: #fff;
+            border-bottom-right-radius: 0.2rem;
+        }
+
+        .chat-input-area {
+            padding: 1rem;
+            background: #fff;
+            border-top: 1px solid var(--zd-border);
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        @media (max-width: 991.98px) {
+            .chat-sidebar {
+                height: auto;
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body class='zd-nav-fixed'>
@@ -90,59 +201,7 @@
                         </li>
                     </ul>
                 </li>
-                <!-- Notifications -->
-                <li class="nav-item dropdown me-2">
-                    <a class="nav-link nav-icon" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="ph-bold ph-bell"></i>
-                        <span
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-light"
-                            style="font-size: 0.65rem; padding: 0.35em 0.5em; margin-top: 10px; margin-left: -8px;">
-                            3
-                        </span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 notifications-dropdown"
-                        aria-labelledby="notifDropdown">
-                        <li class="p-3 border-bottom d-flex justify-content-between align-items-center">
-                            <h6 class="mb-0 fw-bold">Notifications</h6>
-                            <span class="badge bg-primary-subtle text-primary extra-small">3 New</span>
-                        </li>
-                        <div data-simplebar style="max-height: 300px;">
-                            <a href="#" class="notification-item">
-                                <div class="notification-icon bg-primary-subtle text-primary">
-                                    <i class="ph-bold ph-user-plus"></i>
-                                </div>
-                                <div>
-                                    <p class="mb-1 small fw-bold">New user registered</p>
-                                    <p class="mb-0 extra-small text-muted">A few seconds ago</p>
-                                </div>
-                            </a>
-                            <a href="#" class="notification-item">
-                                <div class="notification-icon bg-success-subtle text-success">
-                                    <i class="ph-bold ph-shopping-cart"></i>
-                                </div>
-                                <div>
-                                    <p class="mb-1 small fw-bold">New order received</p>
-                                    <p class="mb-0 extra-small text-muted">2 minutes ago</p>
-                                </div>
-                            </a>
-                            <a href="#" class="notification-item">
-                                <div class="notification-icon bg-warning-subtle text-warning">
-                                    <i class="ph-bold ph-warning"></i>
-                                </div>
-                                <div>
-                                    <p class="mb-1 small fw-bold">Server threshold alert</p>
-                                    <p class="mb-0 extra-small text-muted">1 hour ago</p>
-                                </div>
-                            </a>
-                        </div>
-                        <li class="p-2 text-center border-top">
-                            <a href="#" class="text-primary extra-small fw-bold text-decoration-none">View all
-                                notifications</a>
-                        </li>
-                    </ul>
-                </li>
-                <!-- User Profile -->
+                <!-- User Profile (Snipped for brevity in this scratch, but will be full in file) -->
                 <li class="nav-item dropdown ms-1">
                     <a class="nav-link p-0" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -164,16 +223,10 @@
                         <li>
                             <hr class="dropdown-divider m-0 opacity-10">
                         </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="profile.html">
-                                <i class="ph-bold ph-gear me-3 text-muted"></i> Account
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center text-danger" href="login.html">
-                                <i class="ph-bold ph-sign-out me-3"></i> Logout
-                            </a>
-                        </li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="profile.html"><i
+                                    class="ph-bold ph-user me-3 text-muted"></i> Profile</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center text-danger" href="login.html"><i
+                                    class="ph-bold ph-sign-out me-3"></i> Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -187,12 +240,12 @@
                     <div class="nav">
                         <h2 class="zd-sidenav-menu-heading">Dashboard</h2>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                            data-bs-target="#dashboardCollapse" aria-expanded="false">
+                            data-bs-target="#dashboardCollapse">
                             <div class="zd-nav-link-icon"><i class="ph-bold ph-house"></i></div>
                             <span>Dashboards</span>
                             <div class="zd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
                         </a>
-                        <div class="collapse" id="dashboardCollapse" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="dashboardCollapse">
                             <nav class="zd-sidenav-menu-nested nav">
                                 <a class="nav-link" href="index.html">Default</a>
                                 <a class="nav-link" href="dashboard-analytics.html">Analytics</a>
@@ -206,18 +259,18 @@
                             <div class="zd-nav-link-icon"><i class="ph-bold ph-envelope"></i></div>
                             <span>Inbox</span>
                         </a>
-                        <a class="nav-link" href="apps-chat.html">
+                        <a class="nav-link active" href="apps-chat.html">
                             <div class="zd-nav-link-icon"><i class="ph-bold ph-chats-teardrop"></i></div>
                             <span>Chat</span>
                         </a>
                         <h2 class="zd-sidenav-menu-heading">Components</h2>
-                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#componentsCollapse"
-                            aria-expanded="true">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#componentsCollapse" aria-expanded="false">
                             <div class="zd-nav-link-icon"><i class="ph-bold ph-squares-four"></i></div>
                             <span>UI Elements</span>
                             <div class="zd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
                         </a>
-                        <div class="collapse show" id="componentsCollapse" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="componentsCollapse" data-bs-parent="#sidenavAccordion">
                             <nav class="zd-sidenav-menu-nested nav">
                                 <a class="nav-link" href="alerts.html">Alerts</a>
                                 <a class="nav-link" href="badges.html">Badges</a>
@@ -226,7 +279,7 @@
                                 <a class="nav-link" href="modals.html">Modals</a>
                                 <a class="nav-link" href="tabs-accordions.html">Tabs & Accordions</a>
                                 <a class="nav-link" href="progress.html">Progress</a>
-                                <a class="nav-link active" href="toasts.html">Toasts</a>
+                                <a class="nav-link" href="toasts.html">Toasts</a>
                                 <a class="nav-link" href="spinners.html">Spinners</a>
                             </nav>
                         </div>
@@ -342,238 +395,202 @@
                         </div>
                     </div>
                 </div>
-                <footer class="zd-sidenav-footer"><small>Logged in as:</small>
+                <footer class="zd-sidenav-footer">
+                    <small>Logged in as:</small>
                     <div>Ujang Kasep</div>
                 </footer>
             </nav>
         </aside>
 
         <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
-            <section class="container-fluid px-4">
-                <header class="my-4">
-                    <h1 class="h4 mb-0 fw-bold">Toasts</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item">Components</li>
-                            <li class="breadcrumb-item active">Toasts</li>
-                        </ol>
-                    </nav>
+            <section class="container-fluid px-4 pb-4">
+                <header class="my-4 d-flex justify-content-between align-items-center">
+                    <div>
+                        <h1 class="h4 mb-0 fw-bold">Chat</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item active">Chat</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <button class="btn btn-primary btn-sm d-lg-none" id="toggleChatList">
+                        <i class="ph-bold ph-list"></i>
+                    </button>
                 </header>
 
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Basic Toast</div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-primary" id="liveToastBtn">Show Toast</button>
-                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                                    <div id="liveToast" class="toast" role="alert">
-                                        <div class="toast-header">
-                                            <strong class="me-auto">Notification</strong>
-                                            <small>Just now</small>
-                                            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                <div class="row g-4">
+                    <!-- Chat Sidebar (User List) -->
+                    <div class="col-lg-4 col-xl-3">
+                        <div class="card border-0 shadow-sm rounded-4 chat-sidebar overflow-hidden">
+                            <div class="p-3 border-bottom">
+                                <div class="input-group input-group-sm bg-light rounded-3">
+                                    <span class="input-group-text bg-transparent border-0"><i
+                                            class="ph-bold ph-magnifying-glass text-muted"></i></span>
+                                    <input type="text" class="form-control bg-transparent border-0"
+                                        placeholder="Search chats...">
+                                </div>
+                            </div>
+                            <div class="chat-list-wrapper" data-simplebar>
+                                <div class="chat-item active d-flex align-items-center">
+                                    <div class="avatar-wrapper me-3">
+                                        <img src="../assets/images/user-avatar.png" class="rounded-circle" width="45"
+                                            alt="">
+                                        <span class="status-dot status-online"></span>
+                                    </div>
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="mb-0 fw-bold text-truncate">Siti Juleha</h6>
+                                            <small class="text-muted extra-small">2m</small>
                                         </div>
-                                        <div class="toast-body">Hello, world! This is a toast message.</div>
+                                        <p class="mb-0 text-muted extra-small text-truncate">Ntar sore mabar ya!</p>
+                                    </div>
+                                </div>
+                                <div class="chat-item d-flex align-items-center">
+                                    <div class="avatar-wrapper me-3">
+                                        <img src="../assets/images/user-avatar.png" class="rounded-circle" width="45"
+                                            alt="">
+                                        <span class="status-dot status-away"></span>
+                                    </div>
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="mb-0 fw-bold text-truncate">Asep Racing</h6>
+                                            <small class="text-muted extra-small">1h</small>
+                                        </div>
+                                        <p class="mb-0 text-muted extra-small text-truncate">Woi kasep, gaskeun!</p>
+                                    </div>
+                                </div>
+                                <div class="chat-item d-flex align-items-center">
+                                    <div class="avatar-wrapper me-3">
+                                        <img src="../assets/images/user-avatar.png" class="rounded-circle" width="45"
+                                            alt="">
+                                        <span class="status-dot status-offline"></span>
+                                    </div>
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="mb-0 fw-bold text-truncate">Mang Oleh</h6>
+                                            <small class="text-muted extra-small">3h</small>
+                                        </div>
+                                        <p class="mb-0 text-muted extra-small text-truncate">Odadingna hiji mang.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Colored Toasts</div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-success me-2" id="successToastBtn">Success</button>
-                                <button type="button" class="btn btn-danger" id="dangerToastBtn">Error</button>
-                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                                    <div id="successToast" class="toast text-bg-success border-0">
-                                        <div class="d-flex">
-                                            <div class="toast-body">Success!</div><button
-                                                class="btn-close btn-close-white me-2 m-auto"
-                                                data-bs-dismiss="toast"></button>
-                                        </div>
-                                    </div>
-                                    <div id="dangerToast" class="toast text-bg-danger border-0">
-                                        <div class="d-flex">
-                                            <div class="toast-body">Error!</div><button
-                                                class="btn-close btn-close-white me-2 m-auto"
-                                                data-bs-dismiss="toast"></button>
-                                        </div>
+                    <!-- Chat Window -->
+                    <div class="col-lg-8 col-xl-9">
+                        <div class="card border-0 shadow-sm rounded-4 chat-content overflow-hidden">
+                            <!-- Chat Header -->
+                            <div class="p-3 border-bottom d-flex align-items-center justify-content-between bg-white">
+                                <div class="d-flex align-items-center">
+                                    <img src="../assets/images/user-avatar.png" class="rounded-circle me-3" width="40"
+                                        alt="">
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Siti Juleha</h6>
+                                        <small class="text-success extra-small">Online</small>
                                     </div>
                                 </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-light btn-sm rounded-circle"><i
+                                            class="ph-bold ph-phone"></i></button>
+                                    <button class="btn btn-light btn-sm rounded-circle"><i
+                                            class="ph-bold ph-video-camera"></i></button>
+                                    <button class="btn btn-light btn-sm rounded-circle"><i
+                                            class="ph-bold ph-dots-three-vertical"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Messages History -->
+                            <div class="chat-history" data-simplebar id="chatHistory">
+                                <div class="message message-inbound">
+                                    <div class="message-bubble">
+                                        Halo kasep, apa kabar?
+                                    </div>
+                                    <small class="text-muted extra-small mt-1">10:30 AM</small>
+                                </div>
+                                <div class="message message-outbound">
+                                    <div class="message-bubble">
+                                        Alhamdulillah damang. Nuju naon Teh?
+                                    </div>
+                                    <small class="text-muted extra-small mt-1">10:32 AM</small>
+                                </div>
+                                <div class="message message-inbound">
+                                    <div class="message-bubble">
+                                        Nuju santai weh. Ntar sore mabar ML ya, push rank bareng si Asep.
+                                    </div>
+                                    <small class="text-muted extra-small mt-1">10:35 AM</small>
+                                </div>
+                                <div class="message message-outbound">
+                                    <div class="message-bubble">
+                                        Siap gaskeun! Jam baraha?
+                                    </div>
+                                    <small class="text-muted extra-small mt-1">10:36 AM</small>
+                                </div>
+                            </div>
+
+                            <!-- Chat Input -->
+                            <div class="chat-input-area">
+                                <form id="chatForm">
+                                    <div class="input-group">
+                                        <button class="btn btn-light" type="button"><i
+                                                class="ph-bold ph-paperclip"></i></button>
+                                        <input type="text" class="form-control border-0 bg-light" id="messageInput"
+                                            placeholder="Type your message here..." autocomplete="off">
+                                        <button class="btn btn-primary px-4 fw-bold" type="submit">
+                                            <i class="ph-bold ph-paper-plane-tilt"></i>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col-lg-12">
-                            <div class="card animate__animated animate__fadeIn mb-4">
-                                <div class="card-header fw-semibold">SweetAlert2 Examples</div>
-                                <div class="card-body">
-                                    <div class="d-flex flex-wrap gap-2 mb-4">
-                                        <button type="button" class="btn btn-outline-primary" id="swalBasic">Basic
-                                            Alert</button>
-                                        <button type="button" class="btn btn-success" id="swalSuccess">Success
-                                            Message</button>
-                                        <button type="button" class="btn btn-danger" id="swalError">Error
-                                            Message</button>
-                                        <button type="button" class="btn btn-warning text-white"
-                                            id="swalConfirm">Confirm Dialog</button>
-                                        <button type="button" class="btn btn-info text-white" id="swalCustom">Custom
-                                            Styled</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-lg-12">
-                                <div class="card animate__animated animate__fadeIn mb-4">
-                                    <div class="card-header fw-semibold">Solid-Style Notifications (Notyf)</div>
-                                    <div class="card-body">
-                                        <p class="text-muted small mb-4">Notyf is a minimalistic, dependency-free
-                                            vanilla JS library for toast notifications, perfect for the "Solid"
-                                            aesthetic.</p>
-                                        <div class="d-flex flex-wrap gap-2 mb-2">
-                                            <button type="button" class="btn btn-primary" id="notyfSuccess">Success
-                                                Toast</button>
-                                            <button type="button" class="btn btn-danger" id="notyfError">Error
-                                                Toast</button>
-                                            <button type="button" class="btn btn-warning text-white"
-                                                id="notyfWarning">Warning Toast</button>
-                                            <button type="button" class="btn btn-info text-white" id="notyfInfo">Info
-                                                Toast</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
             </section>
         </main>
     </div>
+
     <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
-    <script src="../assets/plugins/popper/popper.min.js"></script>
-    <script src="../assets/plugins/tempus-dominus/js/tempus-dominus.min.js"></script>
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
-    <script src="../assets/plugins/select2/js/select2.min.js"></script>
     <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
     <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
-    <!-- Notyf -->
-    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <script src="../assets/scripts/scripts.js"></script>
     <script>
         $(function () {
-            // Bootstrap Toasts
-            const toastTrigger = document.getElementById('liveToastBtn')
-            const toastLiveExample = document.getElementById('liveToast')
-            if (toastTrigger) {
-                const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-                toastTrigger.addEventListener('click', () => {
-                    toastBootstrap.show()
-                })
-            }
+            // Send Message
+            $('#chatForm').on('submit', function (e) {
+                e.preventDefault();
+                const input = $('#messageInput');
+                const message = input.val().trim();
 
-            // Colored Toasts
-            $('#successToastBtn').on('click', function () {
-                const toast = new bootstrap.Toast(document.getElementById('successToast'));
-                toast.show();
-            });
-            $('#dangerToastBtn').on('click', function () {
-                const toast = new bootstrap.Toast(document.getElementById('dangerToast'));
-                toast.show();
-            });
+                if (message) {
+                    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    const html = `
+                        <div class="message message-outbound animate__animated animate__fadeInUp">
+                            <div class="message-bubble">${message}</div>
+                            <small class="text-muted extra-small mt-1">${time}</small>
+                        </div>
+                    `;
+                    $('#chatHistory .simplebar-content').append(html);
+                    input.val('');
 
-            // SweetAlert2
-            $('#swalBasic').on('click', function () {
-                Swal.fire('Any fool can use a computer');
-            });
-            $('#swalSuccess').on('click', function () {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Success!',
-                    text: 'Everything is fine.',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            });
-            $('#swalError').on('click', function () {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Something went wrong!',
-                });
-            });
-            $('#swalConfirm').on('click', function () {
-                Swal.fire({
-                    title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#006fee',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
-                    }
-                });
-            });
-            $('#swalCustom').on('click', function () {
-                Swal.fire({
-                    title: '<strong>HTML <u>example</u></strong>',
-                    icon: 'info',
-                    html: 'You can use <b>bold text</b>, ' +
-                        '<a href="//sweetalert2.github.io">links</a> ' +
-                        'and other HTML tags',
-                    showCloseButton: true,
-                    showCancelButton: true,
-                    focusConfirm: false,
-                    confirmButtonText: '<i class="ph-bold ph-thumbs-up"></i> Great!',
-                    confirmButtonAriaLabel: 'Thumbs up, great!',
-                    cancelButtonText: '<i class="ph-bold ph-thumbs-down"></i>',
-                    cancelButtonAriaLabel: 'Thumbs down'
-                });
+                    // Scroll to bottom
+                    const scrollElement = $('#chatHistory [data-simplebar-wrapper] .simplebar-content-wrapper');
+                    scrollElement.scrollTop(scrollElement[0].scrollHeight);
+                }
             });
 
-            // Notyf
-            const notyf = new Notyf({
-                duration: 3000,
-                position: { x: 'right', y: 'top' },
-                types: [
-                    {
-                        type: 'warning',
-                        background: 'orange',
-                        icon: {
-                            className: 'ph-bold ph-warning',
-                            tagName: 'i',
-                            color: 'white'
-                        }
-                    },
-                    {
-                        type: 'info',
-                        background: '#006fee',
-                        icon: {
-                            className: 'ph-bold ph-info',
-                            tagName: 'i',
-                            color: 'white'
-                        }
-                    }
-                ]
-            });
+            // Switch Chat
+            $('.chat-item').on('click', function () {
+                $('.chat-item').removeClass('active');
+                $(this).addClass('active');
 
-            $('#notyfSuccess').on('click', function () {
-                notyf.success('You have been logged in successfully!');
-            });
-            $('#notyfError').on('click', function () {
-                notyf.error('Invalid username or password.');
-            });
-            $('#notyfWarning').on('click', function () {
-                notyf.open({ type: 'warning', message: 'Warning! Check your settings.' });
-            });
-            $('#notyfInfo').on('click', function () {
-                notyf.open({ type: 'info', message: 'Here is some information.' });
+                const name = $(this).find('h6').text();
+                $('.chat-content h6').text(name);
+
+                // Simulate loading chat
+                NProgress.start();
+                setTimeout(() => NProgress.done(), 500);
             });
         });
     </script>
