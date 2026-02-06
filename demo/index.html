@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta name="description" content="ZepDash - Free Bootstrap 5 Admin Dashboard" />
-  <meta name="keywords" content="zepdash, admin dashboard, bootstrap 5, ui kit, webapp" />
-  <meta name="author" content="ZepDash" />
+  <meta name="description" content="NaonDash - Free Bootstrap 5 Admin Dashboard" />
+  <meta name="keywords" content="naondash, admin dashboard, bootstrap 5, ui kit, webapp" />
+  <meta name="author" content="NaonDash" />
   <meta name="robots" content="index, follow" />
 
-  <meta property="og:title" content="ZepDash - Free Bootstrap 5 Admin Dashboard" />
-  <meta property="og:description" content="ZepDash - Free Bootstrap 5 Admin Dashboard" />
+  <meta property="og:title" content="NaonDash - Free Bootstrap 5 Admin Dashboard" />
+  <meta property="og:description" content="NaonDash - Free Bootstrap 5 Admin Dashboard" />
   <meta property="og:type" content="website" />
-  <title>ZepDash - Dashboard</title>
+  <title>NaonDash - Dashboard</title>
 
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -32,111 +32,109 @@
     <nav class="zd-topnav navbar navbar-expand navbar-light">
       <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html">
         <img src="../assets/images/logo.png" alt="logo" class="logo-navbar" />
-        <span class="ms-2 fw-semibold">ZepDash</span>
+        <span class="ms-2 fw-semibold">NaonDash</span>
       </a>
       <button class="btn btn-light" id="sidebarToggle" aria-label="Toggle sidebar">
         <i class="ph-bold ph-sidebar-simple"></i>
       </button>
 
       <ul class="navbar-nav ms-auto align-items-center">
-                                        <!-- Messages -->
-                <li class="nav-item dropdown me-2">
-                    <a class="nav-link nav-icon" href="#" id="msgDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="ph-bold ph-envelope"></i>
-                        <span
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary border border-light"
-                            style="font-size: 0.65rem; padding: 0.35em 0.5em; margin-top: 10px; margin-left: -8px;">
-                            2
-                        </span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 messages-dropdown"
-                        aria-labelledby="msgDropdown">
-                        <li class="p-3 border-bottom d-flex justify-content-between align-items-center">
-                            <h6 class="mb-0 fw-bold">Recent Messages</h6>
-                            <span class="badge bg-primary-subtle text-primary extra-small">2 New</span>
-                        </li>
-                        <div data-simplebar style="max-height: 300px;">
-                            <a href="apps-inbox.html" class="notification-item">
-                                <div class="notification-icon bg-info-subtle text-info">
-                                    <img src="../assets/images/user-avatar.png" class="rounded-circle" width="32"
-                                        alt="">
-                                </div>
-                                <div>
-                                    <p class="mb-1 small fw-bold">Siti Juleha</p>
-                                    <p class="mb-0 extra-small text-muted">Ayang, ntar sore jadi kan?</p>
-                                </div>
-                            </a>
-                            <a href="apps-inbox.html" class="notification-item">
-                                <div class="notification-icon bg-warning-subtle text-warning">
-                                    <img src="../assets/images/user-avatar.png" class="rounded-circle" width="32"
-                                        alt="">
-                                </div>
-                                <div>
-                                    <p class="mb-1 small fw-bold">Asep Racing</p>
-                                    <p class="mb-0 extra-small text-muted">Mabar ML jam 9 ya kasep..</p>
-                                </div>
-                            </a>
-                        </div>
-                        <li class="p-2 text-center border-top">
-                            <a href="apps-inbox.html" class="text-primary extra-small fw-bold text-decoration-none">View
-                                all messages</a>
-                        </li>
-                    </ul>
-                </li>
-                <!-- Notifications -->
-                <li class="nav-item dropdown me-2">
-                    <a class="nav-link nav-icon" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="ph-bold ph-bell"></i>
-                        <span
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-light"
-                            style="font-size: 0.65rem; padding: 0.35em 0.5em; margin-top: 10px; margin-left: -8px;">
-                            3
-                        </span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 notifications-dropdown"
-                        aria-labelledby="notifDropdown">
-                        <li class="p-3 border-bottom d-flex justify-content-between align-items-center">
-                            <h6 class="mb-0 fw-bold">Notifications</h6>
-                            <span class="badge bg-primary-subtle text-primary extra-small">3 New</span>
-                        </li>
-                        <div data-simplebar style="max-height: 300px;">
-                            <a href="#" class="notification-item">
-                                <div class="notification-icon bg-primary-subtle text-primary">
-                                    <i class="ph-bold ph-user-plus"></i>
-                                </div>
-                                <div>
-                                    <p class="mb-1 small fw-bold">New user registered</p>
-                                    <p class="mb-0 extra-small text-muted">A few seconds ago</p>
-                                </div>
-                            </a>
-                            <a href="#" class="notification-item">
-                                <div class="notification-icon bg-success-subtle text-success">
-                                    <i class="ph-bold ph-shopping-cart"></i>
-                                </div>
-                                <div>
-                                    <p class="mb-1 small fw-bold">New order received</p>
-                                    <p class="mb-0 extra-small text-muted">2 minutes ago</p>
-                                </div>
-                            </a>
-                            <a href="#" class="notification-item">
-                                <div class="notification-icon bg-warning-subtle text-warning">
-                                    <i class="ph-bold ph-warning"></i>
-                                </div>
-                                <div>
-                                    <p class="mb-1 small fw-bold">Server threshold alert</p>
-                                    <p class="mb-0 extra-small text-muted">1 hour ago</p>
-                                </div>
-                            </a>
-                        </div>
-                        <li class="p-2 text-center border-top">
-                            <a href="#" class="text-primary extra-small fw-bold text-decoration-none">View all
-                                notifications</a>
-                        </li>
-                    </ul>
-                </li>
-<!-- User Profile -->
+        <!-- Messages -->
+        <li class="nav-item dropdown me-2">
+          <a class="nav-link nav-icon" href="#" id="msgDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="ph-bold ph-envelope"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary border border-light"
+              style="font-size: 0.65rem; padding: 0.35em 0.5em; margin-top: 10px; margin-left: -8px;">
+              2
+            </span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 messages-dropdown"
+            aria-labelledby="msgDropdown">
+            <li class="p-3 border-bottom d-flex justify-content-between align-items-center">
+              <h6 class="mb-0 fw-bold">Recent Messages</h6>
+              <span class="badge bg-primary-subtle text-primary extra-small">2 New</span>
+            </li>
+            <div data-simplebar style="max-height: 300px;">
+              <a href="apps-inbox.html" class="notification-item">
+                <div class="notification-icon bg-info-subtle text-info">
+                  <img src="../assets/images/user-avatar.png" class="rounded-circle" width="32" alt="">
+                </div>
+                <div>
+                  <p class="mb-1 small fw-bold">Siti Juleha</p>
+                  <p class="mb-0 extra-small text-muted">Ayang, ntar sore jadi kan?</p>
+                </div>
+              </a>
+              <a href="apps-inbox.html" class="notification-item">
+                <div class="notification-icon bg-warning-subtle text-warning">
+                  <img src="../assets/images/user-avatar.png" class="rounded-circle" width="32" alt="">
+                </div>
+                <div>
+                  <p class="mb-1 small fw-bold">Asep Racing</p>
+                  <p class="mb-0 extra-small text-muted">Mabar ML jam 9 ya kasep..</p>
+                </div>
+              </a>
+            </div>
+            <li class="p-2 text-center border-top">
+              <a href="apps-inbox.html" class="text-primary extra-small fw-bold text-decoration-none">View
+                all messages</a>
+            </li>
+          </ul>
+        </li>
+        <!-- Notifications -->
+        <li class="nav-item dropdown me-2">
+          <a class="nav-link nav-icon" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="ph-bold ph-bell"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-light"
+              style="font-size: 0.65rem; padding: 0.35em 0.5em; margin-top: 10px; margin-left: -8px;">
+              3
+            </span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 notifications-dropdown"
+            aria-labelledby="notifDropdown">
+            <li class="p-3 border-bottom d-flex justify-content-between align-items-center">
+              <h6 class="mb-0 fw-bold">Notifications</h6>
+              <span class="badge bg-primary-subtle text-primary extra-small">3 New</span>
+            </li>
+            <div data-simplebar style="max-height: 300px;">
+              <a href="#" class="notification-item">
+                <div class="notification-icon bg-primary-subtle text-primary">
+                  <i class="ph-bold ph-user-plus"></i>
+                </div>
+                <div>
+                  <p class="mb-1 small fw-bold">New user registered</p>
+                  <p class="mb-0 extra-small text-muted">A few seconds ago</p>
+                </div>
+              </a>
+              <a href="#" class="notification-item">
+                <div class="notification-icon bg-success-subtle text-success">
+                  <i class="ph-bold ph-shopping-cart"></i>
+                </div>
+                <div>
+                  <p class="mb-1 small fw-bold">New order received</p>
+                  <p class="mb-0 extra-small text-muted">2 minutes ago</p>
+                </div>
+              </a>
+              <a href="#" class="notification-item">
+                <div class="notification-icon bg-warning-subtle text-warning">
+                  <i class="ph-bold ph-warning"></i>
+                </div>
+                <div>
+                  <p class="mb-1 small fw-bold">Server threshold alert</p>
+                  <p class="mb-0 extra-small text-muted">1 hour ago</p>
+                </div>
+              </a>
+            </div>
+            <li class="p-2 text-center border-top">
+              <a href="#" class="text-primary extra-small fw-bold text-decoration-none">View all
+                notifications</a>
+            </li>
+          </ul>
+        </li>
+        <!-- User Profile -->
         <li class="nav-item dropdown ms-1">
           <a class="nav-link p-0" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -151,7 +149,7 @@
                   style="width: 48px; height: 48px; object-fit: cover;" />
                 <div class="ms-3">
                   <h6 class="mb-0 fw-bold">Ujang Kasep</h6>
-                  <p class="mb-0 text-muted extra-small">ujang@zepdash.com</p>
+                  <p class="mb-0 text-muted extra-small">ujang@naondash.com</p>
                 </div>
               </div>
             </li>
@@ -287,6 +285,29 @@
                 <a class="nav-link" href="500.html">500 Error</a>
               </nav>
             </div>
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#multiLevelCollapse"
+              aria-expanded="false">
+              <div class="zd-nav-link-icon"><i class="ph-bold ph-tree-structure"></i></div>
+              <span>Multi Level</span>
+              <div class="zd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+            </a>
+            <div class="collapse" id="multiLevelCollapse" data-bs-parent="#sidenavAccordion">
+              <nav class="zd-sidenav-menu-nested nav">
+                <a class="nav-link" href="#">Level 2 Item</a>
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#level3Collapse"
+                  aria-expanded="false">
+                  <span>Level 3 Menu</span>
+                  <div class="zd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                </a>
+                <div class="collapse" id="level3Collapse">
+                  <nav class="zd-sidenav-menu-nested nav">
+                    <a class="nav-link" href="#">Level 3 Item 1</a>
+                    <a class="nav-link" href="#">Level 3 Item 2</a>
+                  </nav>
+                </div>
+              </nav>
+            </div>
+
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#customCollapse"
               aria-expanded="false">
               <div class="zd-nav-link-icon"><i class="ph-bold ph-browsers"></i></div>
@@ -415,7 +436,7 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="ps-4 fw-semibold">ZepDash Branding</td>
+                        <td class="ps-4 fw-semibold">NaonDash Branding</td>
                         <td>
                           <div class="avatar-group d-flex">
                             <div

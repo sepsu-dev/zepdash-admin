@@ -1,12 +1,12 @@
-# 🚀 ZepDash - Premium Bootstrap 5 Admin Template
+# 🚀 NaonDash - Premium Bootstrap 5 Admin Template
 
-![GitHub downloads](https://img.shields.io/github/downloads/sepsu-dev/zepdash/total?style=for-the-badge&color=006fee)
+![GitHub downloads](https://img.shields.io/github/downloads/sepsu-dev/naondash/total?style=for-the-badge&color=006fee)
 ![Bootstrap 5](https://img.shields.io/badge/Bootstrap-v5.3-7952b3?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![jQuery](https://img.shields.io/badge/jQuery-v3.7-0769ad?style=for-the-badge&logo=jquery&logoColor=white)
 
 ![Banner](assets/images/banner.png)
 
-**ZepDash** is a premium, lightweight, and modern admin dashboard template meticulously crafted with **Bootstrap 5** and **jQuery**. Designed with a "Web 3.0" aesthetic, it offers a clean, productive interface with soft depth, vibrant accents, and smooth interactions.
+**NaonDash** is a premium, lightweight, and modern admin dashboard template meticulously crafted with **Bootstrap 5** and **jQuery**. Designed with a "Web 3.0" aesthetic, it offers a clean, productive interface with soft depth, vibrant accents, and smooth interactions.
 
 ---
 
@@ -58,10 +58,10 @@
 
 ## 🏛️ Acknowledgements
 
-ZepDash is inspired by and partially built upon the solid foundation of [StartBootstrap SB Admin](https://github.com/StartBootstrap/startbootstrap-sb-admin). We thank the community for their excellent open-source contributions.
+NaonDash is inspired by and partially built upon the solid foundation of [StartBootstrap SB Admin](https://github.com/StartBootstrap/startbootstrap-sb-admin). We thank the community for their excellent open-source contributions.
 
 ---
 
 ## 📄 License
 
-Distributed under the **MIT License**. Created with ❤️ by **ZepDash**.
+Distributed under the **MIT License**. Created with ❤️ by **NaonDash**.

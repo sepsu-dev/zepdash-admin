@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zepdash.vercel.app/sitemap.xml
+Sitemap: https://naondash.vercel.app/sitemap.xml

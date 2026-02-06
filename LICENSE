@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 ZepDash
+Copyright (c) 2026 NaonDash
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,11 +24,11 @@ THE SOFTWARE.
 
 ### Acknowledgement
 
-ZepDash is partially based on or inspired by the following open-source projects:
+NaonDash is partially based on or inspired by the following open-source projects:
 
 - [StartBootstrap SB Admin](https://github.com/StartBootstrap/startbootstrap-sb-admin) — Copyright (c) Start Bootstrap — Licensed under the MIT License.
 
-ZepDash also uses the following open-source libraries:
+NaonDash also uses the following open-source libraries:
 
 - [Bootstrap 5](https://getbootstrap.com/) — MIT License
 - [jQuery](https://jquery.com/) — MIT License
