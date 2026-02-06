@@ -1,102 +1,69 @@
 # ZepDash
-![GitHub all releases](https://img.shields.io/github/downloads/sepsu-dev/zepdash/total)
-![Bootstrap 5](https://img.shields.io/badge/Bootstrap-v5.3-7952b3?style=flat&logo=bootstrap&logoColor=white)
-![Modern UI](https://img.shields.io/badge/Design-Modern%20SaaS-006fee)
+![GitHub all releases](https://img.shields.io/github/downloads/sepsu-dev/zepdash/total?style=for-the-badge&color=006fee)
+![Bootstrap 5](https://img.shields.io/badge/Bootstrap-v5.3-7952b3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-<img src="https://raw.githubusercontent.com/sepsu-dev/zepdash/refs/heads/main/assets/images/logo.png" alt="logo" width="80">
+![Banner](assets/images/banner.png)
 
-**ZepDash** is a premium, lightweight, and modern admin dashboard template meticulously crafted with **Bootstrap 5**. It features a "Web 3.0" aesthetic with vibrant accents, soft layered shadows, and a clean interface designed for maximum productivity and ease of use.
-
----
-
-![Dashboard Preview](assets/images/dashboard-preview-wide.png)
+**ZepDash** is a premium, lightweight, and modern admin dashboard template meticulously crafted with **Bootstrap 5** and **jQuery**. It features a "Web 3.0" aesthetic with vibrant accents, soft layered shadows, and a clean interface designed for maximum productivity and ease of use.
 
 ---
 
 ## 🚀 Key Features
 
-- **Standardized Navigation:** A consistent, accordion-based sidebar across all 20+ pages.
-- **Modern UI Suite:** Leverages soft depth, glassmorphism, and a vibrant primary color palette.
-- **20+ Ready-to-use Pages:** From complex form layouts to advanced data tables.
-- **Interactive Data Visualization:** Seamlessly integrated with **Apache ECharts**.
-- **Modern Syntax Highlighting:** Built-in **Prism.js** support with a custom-tuned light theme for documentation.
-- **Responsive & Lightweight:** No jQuery, built with modern JavaScript and vanilla CSS variables.
+- **Modern Landing Page:** A professional entry point for your application.
+- **20+ Dashboard Pages:** Comprehensive suite of admin views located in the `/demo` folder.
+- **Standardized Navigation:** A consistent, accordion-based sidebar with smart "active" state highlighting.
+- **Interactive Data Visualization:** Powered by **Apache ECharts**.
+- **User-Friendly Documentation:** Integrated instructions in the `/docs` folder with clear, scroll-optimized navigation.
+- **Responsive & Premium UI:** Leverages soft depth, glassmorphism, and a vibrant primary color palette.
 
 ---
 
-## 🗺️ Comprehensive Menu Structure
+## 🗺️ Project Structure
 
-### 🏠 1. Dashboard
-- **index.html:** Main overview with interactive bar and pie charts, and key metric cards.
-
-### 🧩 2. Components
-Essential UI elements styled for a premium look:
-- **Alerts:** Contextual feedback messages with icon support.
-- **Badges:** Modern labels and status indicators.
-- **Buttons:** Vibrant gradients, soft shadows, and tactile hover states.
-- **Cards:** Clean content containers with floating hover effects.
-- **Modals:** Flexible dialog prompts for user interaction.
-- **Tabs & Accordions:** Smart content organization.
-- **Progress Bars:** Smooth, animated progress indicators.
-- **Toasts:** Modern notification popups.
-- **Spinners:** Refined loading indicators.
-
-### 📝 3. Forms
-Comprehensive form controls for complex data entry:
-- **Basic Inputs:** Text fields, textareas, and standard controls.
-- **Select:** Custom-styled dropdowns and multi-select placeholders.
-- **Checks & Radios:** Clean checkbox and radio button styles.
-- **Form Layout:** Vertical, horizontal, and multi-column grid layouts.
-- **Validation:** Modern client-side form validation examples.
-
-### 📊 4. Tables
-Data presentation at its best:
-- **Basic Table:** Simple, clean, and responsive data rows.
-- **DataTables:** Powerful integration for searching, sorting, and pagination.
-
-### 📄 5. Pages
-Ready-to-use application templates:
-- **Authentication:** Login, Register, and Forgot Password.
-- **Error States:** Custom-designed 404 and 500 error pages.
-
-### 🛠️ 6. Utilities
-Design tokens and helpful styles:
-- **Colors:** Full color palette documentation.
-- **Typography:** Modern typography system using the "Inter" font.
-- **Icons:** High-quality icon set via **Phosphor Icons**.
+- `index.html`: The main landing page.
+- `/demo`: The live dashboard application (start with `demo/index.html`).
+- `/docs`: Project documentation and guides.
+- `/assets`:
+  - `styles/`: Core theme and page-specific CSS.
+  - `scripts/`: Initialization and functional JS (jQuery-powered).
+  - `plugins/`: Third-party libraries.
+  - `images/`: Brand and UI assets.
 
 ---
 
-## ⚙️ Built With
+## ⚙️ Core Technology & Plugins
 
-- **[Bootstrap 5](https://getbootstrap.com/)** - The world's most popular front-end toolkit.
-- **[Phosphor Icons](https://phosphoricons.com/)** - A flexible icon family for interfaces.
-- **[Apache ECharts](https://echarts.apache.org/)** - A powerful, interactive charting library.
-- **[Prism.js](https://prismjs.com/)** - Lightweight, robust syntax highlighting.
-- **[DataTables](https://datatables.net/)** - Exceptional table enhancement library.
+ZepDash is built with efficiency in mind using modern web standards:
+
+- **[Bootstrap 5](https://getbootstrap.com/)** - Core UI framework.
+- **[jQuery](https://jquery.com/)** - Fast and concise JavaScript library.
+- **[Phosphor Icons](https://phosphoricons.com/)** - Premium icon system.
+- **[Apache ECharts](https://echarts.apache.org/)** - Interactive data visualization.
+- **[Animate.css](https://animate.style/)** - Smooth UI animations.
+- **[NProgress](https://ricostacruz.com/nprogress/)** - Slim progress bars for page transitions.
+- **[Select2](https://select2.org/)** - Enhanced select boxes.
+- **[SweetAlert2](https://sweetalert2.github.io/)** - Beautiful, responsive popup boxes.
+- **[DataTables](https://datatables.net/)** - Advanced table enhancements.
+- **[SimpleBar](https://grsmto.github.io/simplebar/)** - Custom scrollbars.
 
 ---
 
-## 🧩 Installation & Usage
+## ⚙️ Installation & Usage
 
-### Quick Start
-Clone the repository and open `index.html` in your browser:
-```bash
-git clone https://github.com/sepsu-dev/zepdash.git
-cd zepdash
-```
-
-### Customization
-The template uses CSS variables for easy branding. Modify strictly in `assets/styles/styles.css`:
-```css
-:root {
-  --zd-primary: #006fee;
-  --zd-radius: 0.75rem;
-  --zd-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
-}
-```
+1. **Clone/Download** the repository.
+2. Open **`index.html`** in your browser to view the landing page.
+3. To start using the dashboard, navigate to **`demo/index.html`**.
+4. Refer to **`docs/index.html`** for detailed customization guides.
 
 ---
 
 ## 📄 License
-Distributed under the MIT License. See `LICENSE` for more information.
+
+Distributed under the MIT License. See `LICENSE` for more information. Developed with ❤️ by **ZepDash**.
+
+---
+
+### 🏛️ Acknowledgements
+
+ZepDash is inspired by and partially based on [StartBootstrap SB Admin](https://github.com/StartBootstrap/startbootstrap-sb-admin).

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -149,7 +149,8 @@
             </a>
             <div class="collapse" id="dashboardCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="zd-sidenav-menu-nested nav">
-                <a class="nav-link" href="index.html">Analytics</a>
+                <a class="nav-link" href="index.html">Default</a>
+                                <a class="nav-link" href="dashboard-analytics.html">Analytics</a>
                 <a class="nav-link" href="dashboard-crm.html">CRM</a>
                 <a class="nav-link" href="dashboard-ecommerce.html">Ecommerce</a>
               </nav>
@@ -181,7 +182,8 @@
               <nav class="zd-sidenav-menu-nested nav"><a class="nav-link" href="forms-basic.html">Basic
                   Inputs</a><a class="nav-link" href="forms-select.html">Select</a><a class="nav-link"
                   href="forms-checks.html">Checkboxes & Radios</a><a class="nav-link" href="forms-layout.html">Form
-                  Layout</a><a class="nav-link" href="forms-validation.html">Validation</a> </nav>
+                  Layout</a><a class="nav-link" href="forms-validation.html">Validation</a>
+                                <a class="nav-link" href="forms-editors.html">Editors</a> </nav>
             </div>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#tablesCollapse">
               <div class="zd-nav-link-icon"><i class="ph-bold ph-table"></i></div><span>Tables</span>
@@ -191,7 +193,11 @@
               <nav class="zd-sidenav-menu-nested nav"><a class="nav-link" href="tables-basic.html">Basic
                   Table</a><a class="nav-link" href="tables-datatables.html">DataTables</a> </nav>
             </div>
-            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapse">
+                                    <a class="nav-link" href="maps.html">
+                            <div class="zd-nav-link-icon"><i class="ph-bold ph-map-trifold"></i></div>
+                            <span>Maps</span>
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapse">
               <div class="zd-nav-link-icon"><i class="ph-bold ph-file"></i></div><span>Pages</span>
               <div class="zd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
             </a>
@@ -271,11 +277,37 @@
             <div class="card animate__animated animate__fadeIn mb-4">
               <div class="card-header fw-semibold">Pills</div>
               <div class="card-body">
-                <ul class="nav nav-pills mb-3">
-                  <li class="nav-item"><a class="nav-link" href="#">Active</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                      data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                      aria-selected="true">Home</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                      data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                      aria-selected="false">Profile</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                      data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                      aria-selected="false">Contact</button>
+                  </li>
                 </ul>
+                <div class="tab-content border p-3 rounded" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                    aria-labelledby="pills-home-tab" tabindex="0">
+                    Pill home content. Modern and clean navigation using Bootstrap 5 pills.
+                  </div>
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                    tabindex="0">
+                    Pill profile content. ZepDash supports all default Bootstrap navigation styles.
+                  </div>
+                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                    tabindex="0">
+                    Pill contact content. Easily switch between content blocks.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -326,7 +358,4 @@
 </body>
 
 </html>
-
-
-
 

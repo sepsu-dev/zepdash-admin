@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <!-- Basic SEO -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,9 +17,17 @@
   <meta property="og:title" content="ZepDash - Free Bootstrap 5 Admin Dashboard" />
   <meta property="og:description" content="ZepDash - Free Bootstrap 5 Admin Dashboard" />
   <meta property="og:type" content="website" />
-  <title>ZepDash - Typography</title>
+  <title>ZepDash - Analytics Dashboard</title>
+
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
   <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/plugins/nprogress/nprogress.min.css" />
   <link href="../assets/styles/styles.css" rel="stylesheet" />
@@ -29,6 +38,8 @@
   <link rel="stylesheet" href="../assets/plugins/select2/css/select2-bootstrap-5-theme.min.css" />
   <link rel="stylesheet" href="../assets/plugins/simplebar/simplebar.min.css" />
   <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css" />
+  <link rel="stylesheet" href="../assets/plugins/phosphor/regular/style.css" />
+  <link rel="stylesheet" href="../assets/plugins/phosphor/fill/style.css" />
 </head>
 
 <body class='zd-nav-fixed'>
@@ -132,30 +143,35 @@
       </ul>
     </nav>
   </header>
+
   <div id="layoutSidenav">
     <aside id="layoutSidenav_nav">
       <nav class="zd-sidenav accordion zd-sidenav-light" id="sidenavAccordion">
         <div class="zd-sidenav-menu" data-simplebar>
           <div class="nav">
             <h2 class="zd-sidenav-menu-heading">Menu</h2>
-            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dashboardCollapse">
+
+            <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#dashboardCollapse"
+              aria-expanded="true">
               <div class="zd-nav-link-icon"><i class="ph-bold ph-house"></i></div>
               <span>Dashboard</span>
               <div class="zd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
             </a>
-            <div class="collapse" id="dashboardCollapse" data-bs-parent="#sidenavAccordion">
+            <div class="collapse show" id="dashboardCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="zd-sidenav-menu-nested nav">
                 <a class="nav-link" href="index.html">Default</a>
-                                <a class="nav-link" href="dashboard-analytics.html">Analytics</a>
-                <a class="nav-link" href="dashboard-crm.html">CRM</a>
-                <a class="nav-link" href="dashboard-ecommerce.html">Ecommerce</a>
+                <a class="nav-link active" href="dashboard-analytics.html">Analytics</a>
+                <a class="nav-link " href="dashboard-crm.html">CRM</a>
+                <a class="nav-link " href="dashboard-ecommerce.html">Ecommerce</a>
               </nav>
             </div>
+
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#componentsCollapse">
               <div class="zd-nav-link-icon"><i class="ph-bold ph-squares-four"></i></div>
               <span>Components</span>
               <div class="zd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
             </a>
+
             <div class="collapse" id="componentsCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="zd-sidenav-menu-nested nav">
                 <a class="nav-link" href="alerts.html">Alerts</a>
@@ -169,10 +185,13 @@
                 <a class="nav-link" href="spinners.html">Spinners</a>
               </nav>
             </div>
+
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#formsCollapse">
-              <div class="zd-nav-link-icon"><i class="ph-bold ph-textbox"></i></div><span>Forms</span>
+              <div class="zd-nav-link-icon"><i class="ph-bold ph-textbox"></i></div>
+              <span>Forms</span>
               <div class="zd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
             </a>
+
             <div class="collapse" id="formsCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="zd-sidenav-menu-nested nav">
                 <a class="nav-link" href="forms-basic.html">Basic Inputs</a>
@@ -183,24 +202,30 @@
                                 <a class="nav-link" href="forms-editors.html">Editors</a>
               </nav>
             </div>
+
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#tablesCollapse">
-              <div class="zd-nav-link-icon"><i class="ph-bold ph-table"></i></div><span>Tables</span>
+              <div class="zd-nav-link-icon"><i class="ph-bold ph-table"></i></div>
+              <span>Tables</span>
               <div class="zd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
             </a>
+
             <div class="collapse" id="tablesCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="zd-sidenav-menu-nested nav">
                 <a class="nav-link" href="tables-basic.html">Basic Table</a>
                 <a class="nav-link" href="tables-datatables.html">DataTables</a>
               </nav>
             </div>
+
                                     <a class="nav-link" href="maps.html">
                             <div class="zd-nav-link-icon"><i class="ph-bold ph-map-trifold"></i></div>
                             <span>Maps</span>
                         </a>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapse">
-              <div class="zd-nav-link-icon"><i class="ph-bold ph-file"></i></div><span>Pages</span>
+              <div class="zd-nav-link-icon"><i class="ph-bold ph-file"></i></div>
+              <span>Pages</span>
               <div class="zd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
             </a>
+
             <div class="collapse" id="pagesCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="zd-sidenav-menu-nested nav">
                 <a class="nav-link" href="profile.html">Profile</a>
@@ -214,85 +239,208 @@
                 <a class="nav-link" href="500.html">500 Error</a>
               </nav>
             </div>
-            <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#utilitiesCollapse"
-              aria-expanded="true">
+
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#utilitiesCollapse">
               <div class="zd-nav-link-icon"><i class="ph-bold ph-paint-brush"></i></div>
               <span>Utilities</span>
               <div class="zd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
             </a>
-            <div class="collapse show" id="utilitiesCollapse" data-bs-parent="#sidenavAccordion">
+
+            <div class="collapse" id="utilitiesCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="zd-sidenav-menu-nested nav">
                 <a class="nav-link" href="colors.html">Colors</a>
-                <a class="nav-link active" href="typography.html">Typography</a>
+                <a class="nav-link" href="typography.html">Typography</a>
                 <a class="nav-link" href="icons.html">Icons</a>
               </nav>
             </div>
+
           </div>
         </div>
-        <footer class="zd-sidenav-footer"><small>Logged in as:</small>
+
+        <footer class="zd-sidenav-footer">
+          <small>Logged in as:</small>
           <div>Sepsu Didieu</div>
         </footer>
       </nav>
     </aside>
+
     <main id="layoutSidenav_content">
-      <section class="container-fluid px-4">
-        <header class="my-4">
-          <h1 class="h4 mb-0 fw-bold">Typography</h1>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-              <li class="breadcrumb-item">Utilities</li>
-              <li class="breadcrumb-item active">Typography</li>
-            </ol>
-          </nav>
+      <section class="container-fluid px-4 pb-5">
+        <header class="my-4 d-flex justify-content-between align-items-center">
+          <div>
+            <h1 class="h4 mb-0 fw-bold">Dashboard Analytics</h1>
+            <p class="text-muted small mb-0">Welcome back, here's what's happening today.</p>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-white border shadow-sm px-3"><i class="ph-bold ph-calendar-blank me-1"></i>
+              Today</button>
+            <button class="btn btn-sm btn-primary shadow-sm px-3"><i class="ph-bold ph-download-simple me-1"></i>
+              Export</button>
+          </div>
         </header>
+
+        <!-- Stats Row -->
+        <div class="row mb-2">
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm stats-card animate__animated animate__fadeIn">
+              <div class="stats-icon icon-blue">
+                <i class="ph-bold ph-currency-dollar"></i>
+              </div>
+              <div class="stats-info">
+                <span>Total Revenue</span>
+                <h3>$24,560 <span class="trend-indicator trend-up"><i class="ph-bold ph-trend-up"></i> 12%</span></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm stats-card animate__animated animate__fadeIn">
+              <div class="stats-icon icon-success">
+                <i class="ph-bold ph-shopping-cart"></i>
+              </div>
+              <div class="stats-info">
+                <span>Total Sales</span>
+                <h3>1,204 <span class="trend-indicator trend-up"><i class="ph-bold ph-trend-up"></i> 8%</span></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm stats-card animate__animated animate__fadeIn">
+              <div class="stats-icon icon-warning">
+                <i class="ph-bold ph-users"></i>
+              </div>
+              <div class="stats-info">
+                <span>New Customers</span>
+                <h3>456 <span class="trend-indicator trend-down"><i class="ph-bold ph-trend-down"></i> 3%</span></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm stats-card animate__animated animate__fadeIn">
+              <div class="stats-icon icon-danger">
+                <i class="ph-bold ph-eye"></i>
+              </div>
+              <div class="stats-info">
+                <span>Site Visits</span>
+                <h3>12.4k <span class="trend-indicator trend-up"><i class="ph-bold ph-trend-up"></i> 24%</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-stretch">
+          <div class="col-lg-8 mb-4">
+            <div class="card border-0 shadow-sm h-100 animate__animated animate__fadeIn">
+              <div class="card-header bg-transparent border-0 pt-4 px-4 fw-bold">Revenue Growth</div>
+              <div class="card-body">
+                <div id="barChart" class="chart-container" style="height: 320px;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm h-100 animate__animated animate__fadeIn">
+              <div class="card-header bg-transparent border-0 pt-4 px-4 fw-bold">Traffic Source</div>
+              <div class="card-body">
+                <div id="pieChart" class="chart-container" style="height: 320px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Transactions -->
         <div class="row">
-          <div class="col-lg-6">
-            <div class="card animate__animated animate__fadeIn mb-4">
-              <div class="card-header fw-semibold">Headings</div>
-              <div class="card-body">
-                <h1>h1. Heading</h1>
-                <h2>h2. Heading</h2>
-                <h3>h3. Heading</h3>
-                <h4>h4. Heading</h4>
-                <h5>h5. Heading</h5>
-                <h6>h6. Heading</h6>
+          <div class="col-12">
+            <div class="card border-0 shadow-sm animate__animated animate__fadeIn">
+              <div
+                class="card-header d-flex justify-content-between align-items-center bg-transparent border-0 pt-4 px-4">
+                <span class="fw-bold">Recent Transactions</span>
+                <a href="tables-basic.html" class="btn btn-sm btn-light border px-3">View All</a>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card animate__animated animate__fadeIn mb-4">
-              <div class="card-header fw-semibold">Display Headings</div>
-              <div class="card-body">
-                <h1 class="display-1">Display 1</h1>
-                <h1 class="display-4">Display 4</h1>
-                <h1 class="display-6">Display 6</h1>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card animate__animated animate__fadeIn mb-4">
-              <div class="card-header fw-semibold">Text Utilities</div>
-              <div class="card-body">
-                <p class="text-primary">Primary text</p>
-                <p class="text-secondary">Secondary text</p>
-                <p class="text-success">Success text</p>
-                <p class="text-danger">Danger text</p>
-                <p class="text-muted">Muted text</p>
-                <p class="fw-bold">Bold text</p>
-                <p class="fst-italic">Italic text</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card animate__animated animate__fadeIn mb-4">
-              <div class="card-header fw-semibold">Lead & Blockquote</div>
-              <div class="card-body">
-                <p class="lead">This is a lead paragraph. It stands out from regular paragraphs.</p>
-                <blockquote class="blockquote">
-                  <p>"This is a blockquote for quoting sources."</p>
-                </blockquote>
-                <figcaption class="blockquote-footer">Author Name</figcaption>
+              <div class="card-body px-0 pb-0">
+                <div class="table-responsive">
+                  <table class="table table-hover align-middle mb-0">
+                    <thead style="background: #f8fafc;">
+                      <tr>
+                        <th class="ps-4 border-0">Order ID</th>
+                        <th class="border-0">Customer</th>
+                        <th class="border-0">Amount</th>
+                        <th class="border-0">Date</th>
+                        <th class="border-0">Status</th>
+                        <th class="pe-4 text-end border-0">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="ps-4 fw-medium text-primary">#ORD-001</td>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div
+                              class="avatar-sm me-2 bg-light rounded-circle d-flex align-items-center justify-content-center"
+                              style="width: 32px; height: 32px; font-size: 0.8rem; font-weight: 600;">RF</div>
+                            Robert Fox
+                          </div>
+                        </td>
+                        <td>$124.00</td>
+                        <td>Mar 12, 2024</td>
+                        <td><span class="badge bg-success-subtle text-success border-0 px-2 py-1">Completed</span></td>
+                        <td class="pe-4 text-end">
+                          <button class="btn btn-sm btn-light border px-2">Details</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ps-4 fw-medium text-primary">#ORD-002</td>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div
+                              class="avatar-sm me-2 bg-light rounded-circle d-flex align-items-center justify-content-center"
+                              style="width: 32px; height: 32px; font-size: 0.8rem; font-weight: 600;">JC</div>
+                            Jane Cooper
+                          </div>
+                        </td>
+                        <td>$89.00</td>
+                        <td>Mar 11, 2024</td>
+                        <td><span class="badge bg-warning-subtle text-warning border-0 px-2 py-1">Pending</span></td>
+                        <td class="pe-4 text-end">
+                          <button class="btn btn-sm btn-light border px-2">Details</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ps-4 fw-medium text-primary">#ORD-003</td>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div
+                              class="avatar-sm me-2 bg-light rounded-circle d-flex align-items-center justify-content-center"
+                              style="width: 32px; height: 32px; font-size: 0.8rem; font-weight: 600;">GH</div>
+                            Guy Hawkins
+                          </div>
+                        </td>
+                        <td>$256.00</td>
+                        <td>Mar 10, 2024</td>
+                        <td><span class="badge bg-success-subtle text-success border-0 px-2 py-1">Completed</span></td>
+                        <td class="pe-4 text-end">
+                          <button class="btn btn-sm btn-light border px-2">Details</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ps-4 fw-medium text-primary">#ORD-004</td>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div
+                              class="avatar-sm me-2 bg-light rounded-circle d-flex align-items-center justify-content-center"
+                              style="width: 32px; height: 32px; font-size: 0.8rem; font-weight: 600;">BC</div>
+                            Bessie Cooper
+                          </div>
+                        </td>
+                        <td>$45.00</td>
+                        <td>Mar 10, 2024</td>
+                        <td><span class="badge bg-danger-subtle text-danger border-0 px-2 py-1">Cancelled</span></td>
+                        <td class="pe-4 text-end">
+                          <button class="btn btn-sm btn-light border px-2">Details</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -309,6 +457,10 @@
   <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
   <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
   <script src="../assets/scripts/scripts.js"></script>
+  <script src="../assets/plugins/echarts/echarts.min.js"></script>
+  <!-- Dashboard specific charts -->
+  <script src="../assets/scripts/pages/dashboard-analytics.js"></script>
+
 </body>
 
 </html>

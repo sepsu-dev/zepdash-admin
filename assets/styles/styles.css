@@ -1,5 +1,5 @@
 /* ======================================
-   zepdash-admin - Modern UI Styles
+   ZepDash - Modern UI Styles
    ====================================== */
 
 :root {
@@ -560,7 +560,7 @@ ul.dropdown-menu li a.dropdown-item.text-danger:hover {
    ====================================== */
 .form-control,
 .form-select {
-  border-radius: var(--zd-radius) !important;
+  border-radius: 8px;
   border: 1px solid var(--zd-border);
   padding: 0.5rem 0.85rem;
   font-size: 0.875rem;
