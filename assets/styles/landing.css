@@ -1,0 +1,96 @@
+:root {
+    --zd-primary: #006fee;
+    --zd-secondary: #71717a;
+    --zd-text: #11181c;
+    --zd-accent: #3e94ff;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--zd-text);
+    background-color: #fcfcfc;
+    margin: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 0 60px;
+    background: radial-gradient(circle at center, rgba(216, 241, 230, 0.4) 0%, rgba(255, 255, 255, 1) 100%);
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #11181c 0%, #006fee 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--zd-secondary);
+    margin: 0 auto 3rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* Centered Hero Image */
+.hero-image-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 1.2rem;
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Buttons */
+.btn-premium {
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary-zd {
+    background-color: var(--zd-primary);
+    color: white;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 111, 238, 0.2);
+}
+
+.btn-primary-zd:hover {
+    transform: translateY(-3px);
+    background-color: var(--zd-accent);
+    color: white;
+    box-shadow: 0 15px 25px rgba(0, 111, 238, 0.3);
+}
+
+.btn-outline-zd {
+    border: 2px solid var(--zd-primary);
+    color: var(--zd-primary);
+    background: transparent;
+}
+
+.btn-outline-zd:hover {
+    background: rgba(0, 111, 238, 0.05);
+    color: var(--zd-primary);
+    transform: translateY(-3px);
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}

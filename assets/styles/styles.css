@@ -34,6 +34,12 @@ body {
   color: var(--zd-text);
 }
 
+/* Fix for anchor link scroll overlap */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+
 #layoutSidenav {
   display: flex;
 }

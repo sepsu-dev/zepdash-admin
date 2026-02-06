@@ -1,0 +1,26 @@
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--zd-border);
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.icon-box:hover {
+    background: var(--zd-bg-light);
+    transform: translateY(-2px);
+}
+
+.icon-box i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--zd-primary);
+}
+
+.icon-box span {
+    font-size: 0.75rem;
+    color: var(--zd-text-muted);
+    text-align: center;
+}
